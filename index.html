@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistem Pemerintahan Indonesia 1945</title>
+  <style>
+    :root {
+      --bg-url: url('https://img.freepik.com/free-vector/ripped-newspaper-flower-stem-old-brown-paper-banner-vector_53876-136540.jpg?semt=ais_hybrid&w=740'); /* GANTI URL INI */
+      --bg-light: rgba(255, 255, 255, 0.95);
+      --bg-dark: rgba(34, 34, 34, 0.95);
+      --text-light: #2c3e50;
+      --text-dark: #f1f1f1;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--bg-url) no-repeat center center fixed;
+      background-size: cover;
+      transition: background-color 0.3s;
+    }
+
+    body.dark .container {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto 100px;
+      background: var(--bg-light);
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .slide {
+      display: none;
+      padding: 30px;
+      animation: slideIn 0.4s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      z-index: 10;
+    }
+
+    .nav button {
+      background: #222;
+      border: none;
+      padding: 12px 18px;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav button:hover {
+      background: #444;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #333;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    h2 {
+      color: inherit;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">Mode Terang/Gelap</button>
+
+  <div class="container">
+    <div class="slide active">
+      <h2>Kabinet Presidensial (19 Agustus - 14 November 1945)</h2>
+      <p>Melalui sidang PPKI (18 Agustus 1945), Sukarno ditetapkan sebagai presiden dan Moh. Hatta sebagai wakil presiden. Untuk memenuhi kelengkapan negara sesuai dengan UUD 1945, dibentuklah kabinet pertama yang dinamakan kabinet presidensial. Kabinet ini diketuai oleh Presiden Sukarno dan mulai melaksanakan tugasnya pada 19 Agustus 1945.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Ciri-ciri Sistem Pemerintahan Presidensial</h2>
+      <ul>
+        <li>Presiden menjabat sebagai kepala negara dan kepala pemerintahan.</li>
+        <li>Presiden tidak dipilih oleh parlemen, tetapi secara langsung oleh rakyat atau suatu dewan majelis.</li>
+        <li>Kabinet dibentuk oleh presiden dan bertanggung jawab kepada presiden, bukan kepada parlemen.</li>
+        <li>Presiden tidak dapat membubarkan parlemen.</li>
+        <li>Parlemen dipilih oleh rakyat serta memiliki kekuasaan legislatif dan sebagai lembaga perwakilan.</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Perubahan ke Sistem Parlementer</h2>
+      <p>Pada 14 November 1945, sistem pemerintahan presidensial berakhir, digantikan dengan sistem pemerintahan parlementer (14 November 1945 hingga 29 Januari 1948).</p>
+      <p>Menurut penggagas utamanya, Sutan Syahrir, sistem parlementer mencerminkan demokrasi yang sesungguhnya. Kekuasaan yang terlalu besar di tangan presiden, setidaknya dalam praktiknya di Indonesia pada waktu itu, tidak sesuai dengan semangat demokrasi yang menghendaki kedaulatan tertinggi ada di tangan rakyat.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Alasan Perubahan Sistem Pemerintahan</h2>
+      <p>Sistem parlementer dianggap lebih cocok untuk kondisi Indonesia yang memiliki beragam ideologi, paham, atau pandangan politik.</p>
+      <p>Pemberlakuan sistem parlementer dikukuhkan melalui:</p>
+      <ul>
+        <li>Maklumat Pemerintah 3 November 1945 tentang pembentukan partai-partai politik</li>
+        <li>Maklumat Pemerintah 14 November 1945 tentang perubahan sistem pemerintahan presidensial menjadi sistem pemerintahan parlementer</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Ciri-ciri Sistem Pemerintahan Parlementer</h2>
+      <ul>
+        <li>Perdana menteri adalah kepala pemerintahan dan presiden/raja adalah kepala negara.</li>
+        <li>Perdana menteri mengangkat menteri-menteri.</li>
+        <li>Kabinet bertanggung jawab kepada parlemen.</li>
+        <li>Parlemen dapat membubarkan kabinet melalui mosi tidak percaya.</li>
+        <li>Perdana menteri adalah juga anggota parlemen.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button onclick="changeSlide(-1)">&#8592;</button>
+    <button onclick="changeSlide(1)">&#8594;</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function changeSlide(dir) {
+      slides[current].classList.remove('active');
+      current = (current + dir + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+          </html>
